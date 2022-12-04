@@ -7,6 +7,12 @@ Page({
     num: "0",
     op: " "
   },
+  onShareAppMessage() {
+
+  },
+  onShareTimeline() { 
+    
+  },
   result: null,
   isClear: false,
   numBtn: function (e) {
@@ -42,10 +48,10 @@ Page({
       this.result = this.result % num
     }
     this.setData({ num: this.result + "" })
-    if(e.target.dataset.val === "="){
-      this.num="0"
-      this.op=" "
-      this.result=null     
+    if (e.target.dataset.val === "=") {
+      this.num = "0"
+      this.op = " "
+      this.result = null
     }
   },
   dotBtn: function () {
